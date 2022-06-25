@@ -9,8 +9,8 @@ const Container = (props) => {
     <div className={styles.container}>
       {props.children}
     </div>
-  )
-}
+  );
+};
 
 Container.propTypes = {
   children: PropTypes.node.isRequired,

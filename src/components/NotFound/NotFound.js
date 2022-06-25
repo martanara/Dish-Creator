@@ -1,4 +1,6 @@
-import PageSubtitle from '../PageSubtitle/PageSubtitle'
+import React from 'react';
+
+import PageSubtitle from '../PageSubtitle/PageSubtitle';
 
 const NotFound = () => {
   return (

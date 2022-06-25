@@ -10,7 +10,7 @@ import { formatMinutes } from '../../utils/formatMinutes';
 
 import styles from './Form.module.scss';
 
-const DishesForm = () => {
+const Form = () => {
   const [name, setName] = useState('');
   const [type, setType] = useState('');
   const [preparation_time, setPreparation_time] = useState('');
@@ -20,20 +20,20 @@ const DishesForm = () => {
   const [slices_of_bread, setSlices_of_bread] = useState('');
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('')
+  const [errorMessage, setErrorMessage] = useState('');
 
   const addDishRequest = (newDish) => {
     axios.post('https://frosty-wood-6558.getsandbox.com:443/dishes', newDish)
-    .then((response) => {
-      if (response.status === 200) setSuccess(true);
-      console.log(response);
-    })
-    .catch((error) => {
-      if (error) {
-        setErrorMessage(error.message)
-        setError(true);
-      } 
-    });
+      .then((response) => {
+        if (response.status === 200) setSuccess(true);
+        console.log(response);
+      })
+      .catch((error) => {
+        if (error) {
+          setErrorMessage(error.message);
+          setError(true);
+        } 
+      });
   };
   
   const handleSubmit = (e) => {
@@ -59,12 +59,12 @@ const DishesForm = () => {
 
   const clearForm = () => {
     setName('');
-    setType('pizza');
-    setPreparation_time(5);
-    setNo_of_slices(0);
-    setDiameter(0);
-    setSpiciness_scale(1);
-    setSlices_of_bread(0);
+    setType('');
+    setPreparation_time('');
+    setNo_of_slices('');
+    setDiameter('');
+    setSpiciness_scale('');
+    setSlices_of_bread('');
     setError(false);
     setSuccess(false);
   };
@@ -81,17 +81,18 @@ const DishesForm = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <label>Preparation time</label>
+        <label>Preparation time in minutes</label>
         <InputField
           type="number"
           value={preparation_time}
-          placeholder={5}
+          placeholder="5"
           min="5"
           max="120"
           onChange={(e) => setPreparation_time(e.target.value)}
         />
         <label>Type of dish</label>
         <SelectField
+          value={type}
           onChange={(e) => setType(e.target.value)}
           options={['', 'pizza', 'soup', 'sandwich']}
         />
@@ -102,20 +103,20 @@ const DishesForm = () => {
               <InputField
                 type="number"
                 value={no_of_slices}
-                placeholder={1}
+                placeholder="1"
                 onChange={(e) => setNo_of_slices(e.target.value)}
-                min={1}
-                max={50}
+                min="1"
+                max="50"
               />
               <label >Diameter in inches</label>
               <InputField
                 type="number"
                 value={diameter}
-                placeholder={10.5}
+                placeholder="10.5"
                 onChange={(e) => setDiameter(e.target.value)}
-                min={10.5}
-                max={50}
-                step={0.1}
+                min="10.5"
+                max="50"
+                step="0.1"
               />
             </div>
           )
@@ -127,9 +128,9 @@ const DishesForm = () => {
               <InputField
                 type="number"
                 value={spiciness_scale}
-                placeholder={1}
-                min={1}
-                max={10}
+                placeholder="1"
+                min="1"
+                max="10"
                 onChange={(e) => setSpiciness_scale(e.target.value)}
               />
             </div>
@@ -142,10 +143,10 @@ const DishesForm = () => {
               <InputField
                 type="number"
                 value={slices_of_bread}
-                placeholder={1}
+                placeholder="1"
                 onChange={(e) => setSlices_of_bread(e.target.value)}
-                min={1}
-                max={10}
+                min="1"
+                max="10"
               />
             </div>
           )
@@ -157,4 +158,4 @@ const DishesForm = () => {
   );
 };
 
-export default DishesForm;
+export default Form;

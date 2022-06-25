@@ -12,7 +12,7 @@ const Hero = () => {
       <PageSubtitle>Add your dish from the form below</PageSubtitle>
       <img alt='fyring pan with scrambled eggs' src='inky-cooking-scrambled-egg-in-a-pan-1.png'/>
     </div>
-  )
+  );
 };
 
 export default Hero;

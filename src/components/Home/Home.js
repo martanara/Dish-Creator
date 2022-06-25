@@ -13,7 +13,7 @@ const Home = () => {
       <Form />
       <Footer />
     </div>
-  )
+  );
 };
 
 export default Home;
