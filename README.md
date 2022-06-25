@@ -1,5 +1,7 @@
 # Dish Creator
 
+Open [https://dish-creator.herokuapp.com/](live preview).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 To setup the project, download all the files and in the project directory run "npm install". 
