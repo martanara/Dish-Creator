@@ -2,12 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-To setup the project, download all the files and in the project directory run "npm install".\ 
+To setup the project, download all the files and in the project directory run "npm install". 
 Once the install is finished run "npm start".\
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
+The page will reload when you make changes.
 
 ## Other available Scripts
 
