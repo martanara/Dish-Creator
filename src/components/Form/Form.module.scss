@@ -1,0 +1,31 @@
+@import '../../styles/settings.scss';
+
+.errorMessage {
+  margin: 30px auto;
+  color: $color-warning;
+  width: 500px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.successMessage {
+  margin: 30px auto;
+  color: $color-success;
+  width: 500px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.dishForm {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+
+  .formElements {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
