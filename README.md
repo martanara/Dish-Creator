@@ -1,6 +1,6 @@
 # Dish Creator
 
-Open [https://dish-creator.herokuapp.com/](live preview).
+Open https://dish-creator.herokuapp.com/ for live preview.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
