@@ -59,12 +59,12 @@ const DishesForm = () => {
 
   const clearForm = () => {
     setName('');
-    setType('pizza');
-    setPreparation_time(5);
-    setNo_of_slices(0);
-    setDiameter(0);
-    setSpiciness_scale(1);
-    setSlices_of_bread(0);
+    setType('');
+    setPreparation_time('');
+    setNo_of_slices('');
+    setDiameter('');
+    setSpiciness_scale('');
+    setSlices_of_bread('');
     setError(false);
     setSuccess(false);
   };
@@ -92,6 +92,7 @@ const DishesForm = () => {
         />
         <label>Type of dish</label>
         <SelectField
+          value={type}
           onChange={(e) => setType(e.target.value)}
           options={['', 'pizza', 'soup', 'sandwich']}
         />
